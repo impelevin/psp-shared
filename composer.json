@@ -1,0 +1,24 @@
+{
+    "name": "impelevin/psp-shared",
+    "description": "Shared classes, functions, helpers and more between PSP projects.",
+    "keywords": [
+        "modules",
+        "laravel",
+        "impelevin",
+        "module",
+        "psp-shared"
+    ],
+    "autoload": {
+        "psr-4": {
+            "IMPelevin\\PspShared\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ilya Pelevin",
+            "email": "79117851101@ya.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {}
+}

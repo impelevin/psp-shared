@@ -5,7 +5,7 @@ Run this command to install:
 sail composer require impelevin/psp-shared
 ```
 Add a provider to a Service Provider:
-```
+```php
 IMPelevin\PSPShared\Providers\PSPSharedProvider::class
 ```
 
@@ -15,7 +15,7 @@ IMPelevin\PSPShared\Providers\PSPSharedProvider::class
 
 Extend your `Eloquent\Model` from `IMPelevin\PSPShared\LTree\Models\LTreeModel`.
 
-Run this command to publish migration create a table used by Ltree:
+Run this command to publish migration create a table used by LTree:
 ```bash
 sail artisan vendor:publish --tag=psp-ltree-migrations
 ```
@@ -30,3 +30,11 @@ The `get()` method returns `LTreeCollection`, instead of the usual `Eloquent\Col
 `LTreeCollection` has a `toTree()` method that converts a flat collection to a tree.
 
 `LTreeResourceCollection` & `LTreeResource`, which take `LTreeCollection` as an argument, will also be useful.
+
+### Redirect to an external link from the Backend
+
+Add to "App\Http\Kernel.php " middleware:
+
+```php
+\IMPelevin\PSPShared\Inertia\Middleware\RedirectExternalLocation::class
+```

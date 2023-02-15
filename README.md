@@ -4,6 +4,10 @@ Run this command to install:
 ```bash
 sail composer require impelevin/psp-shared
 ```
+Add a provider to a Service Provider:
+```
+IMPelevin\PSPShared\Providers\PSPSharedProvider::class
+```
 
 ## How to use
 

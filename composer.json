@@ -1,18 +1,16 @@
 {
     "name": "impelevin/psp-shared",
     "description": "Shared classes, functions, helpers and more between PSP projects.",
-    "keywords": [
-        "modules",
-        "laravel",
-        "impelevin",
-        "module",
-        "psp-shared"
-    ],
     "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
         "psr-4": {
-            "IMPelevin\\PspShared\\": "src/"
+            "IMPelevin\\PSPShared\\": "src/"
         }
     },
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ilya Pelevin",
@@ -20,5 +18,9 @@
             "role": "Developer"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0",
+        "umbrellio/laravel-ltree": "^7.4"
+    }
 }

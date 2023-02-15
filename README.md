@@ -38,3 +38,21 @@ Add to "App\Http\Kernel.php " middleware:
 ```php
 \IMPelevin\PSPShared\Inertia\Middleware\RedirectExternalLocation::class
 ```
+
+### Show friendly error pages
+
+Add to "App\Exceptions\Handler.php" trait:
+
+```php
+use IMPelevin\PSPShared\Inertia\Exceptions\Traits\ErrorHandling
+```
+
+### Combining fields
+
+Use traits for models:
+
+```php
+use IMPelevin\PSPShared\Filters\CastAttributes\Traits\FullName; // Full Name
+use IMPelevin\PSPShared\Filters\CastAttributes\Traits\FullAddress; // Full Address
+```
+

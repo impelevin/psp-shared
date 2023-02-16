@@ -1,13 +1,13 @@
 <?php
 
-namespace IMPelevin\PSPShared\Filters\CastAttributes\Traits;
+namespace IMPelevin\PSPShared\Formatters\CastAttributes\Traits;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use IMPelevin\PSPShared\Filters\CastAttributes\CombinedField;
+use IMPelevin\PSPShared\Formatters\CastAttributes\CombinedField;
 
 trait FullAddress
 {
-    protected function fullAddress(): Attribute
+    protected function uiFullAddress(): Attribute
     {
         return Attribute::make(
             get: fn () => CombinedField::fullAddress($this),

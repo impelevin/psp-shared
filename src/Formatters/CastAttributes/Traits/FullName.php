@@ -1,13 +1,13 @@
 <?php
 
-namespace IMPelevin\PSPShared\Filters\CastAttributes\Traits;
+namespace IMPelevin\PSPShared\Formatters\CastAttributes\Traits;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use IMPelevin\PSPShared\Filters\CastAttributes\CombinedField;
+use IMPelevin\PSPShared\Formatters\CastAttributes\CombinedField;
 
 trait FullName
 {
-    protected function fullName(): Attribute
+    protected function uiFullName(): Attribute
     {
         return Attribute::make(
             get: fn () => CombinedField::fullName($this),

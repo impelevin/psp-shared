@@ -1,6 +1,6 @@
 <?php
 
-namespace IMPelevin\PSPShared\Filters\CastAttributes;
+namespace IMPelevin\PSPShared\Formatters\CastAttributes;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;

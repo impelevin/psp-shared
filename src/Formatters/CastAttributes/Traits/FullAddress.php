@@ -10,7 +10,7 @@ trait FullAddress
     protected function uiFullAddress(): Attribute
     {
         return Attribute::make(
-            get: fn () => CombinedField::fullAddress($this),
+            get: fn () => CombinedField::fullAddress($this->getAttributes()),
         );
     }
 }

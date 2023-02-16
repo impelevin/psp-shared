@@ -10,7 +10,7 @@ trait FullName
     protected function uiFullName(): Attribute
     {
         return Attribute::make(
-            get: fn () => CombinedField::fullName($this),
+            get: fn () => CombinedField::fullName($this->getAttributes()),
         );
     }
 }

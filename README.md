@@ -58,3 +58,9 @@ use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Gender;
 use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Phone;
 ```
 
+### Commands
+
+Automatically find, translate and save missing translation keys:
+```bash
+sail artisan language:find-and-add
+```

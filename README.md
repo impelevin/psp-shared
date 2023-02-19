@@ -52,8 +52,9 @@ use IMPelevin\PSPShared\Inertia\Exceptions\Traits\ErrorHandling
 Use traits for models:
 
 ```php
-use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\FullName; // Full Name
-use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\FullAddress; // Full Address
-use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Gender; // Gender
+use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\FullName;
+use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\FullAddress;
+use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Gender;
+use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Phone;
 ```
 

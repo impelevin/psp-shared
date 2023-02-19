@@ -24,6 +24,12 @@ class CombinedField
         'country',
     ];
 
+    private static $phoneFields = [
+        'mobile_phone',
+        'office_phone',
+        'fax',
+    ];
+
     /**
      * Get full name
      *
@@ -64,6 +70,29 @@ class CombinedField
             ->push($country)
             ->filter()
             ->implode(', ');
+    }
+
+    public static function phonesCollection(Arrayable|array $data): Collection
+    {
+        if ($data instanceof Arrayable)
+            $data = $data->toArray();
+
+        $collect = self::extract($data, self::$phoneFields);
+
+        return $collect->filter()->map(function ($phone, $key) {
+            switch ($key) {
+                case 'mobile_phone':
+                    $prefix = 'Mobile: ';
+                case 'office_phone':
+                    $prefix = 'Office: ';
+                case 'fax':
+                    $prefix = 'Fax: ';
+                default:
+                    $prefix = '';
+            }
+
+            return $prefix.$phone;
+        })->values();
     }
 
     /**

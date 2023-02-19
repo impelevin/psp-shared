@@ -83,10 +83,13 @@ class CombinedField
             switch ($key) {
                 case 'mobile_phone':
                     $prefix = 'Mobile: ';
+                    break;
                 case 'office_phone':
                     $prefix = 'Office: ';
+                    break;
                 case 'fax':
                     $prefix = 'Fax: ';
+                    break;
                 default:
                     $prefix = '';
             }

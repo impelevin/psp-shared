@@ -56,6 +56,7 @@ use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\FullName;
 use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\FullAddress;
 use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Gender;
 use IMPelevin\PSPShared\Formatters\CastAttributes\Traits\Phone;
+use IMPelevin\PSPShared\Traits\ApiResponse;
 ```
 
 ### Commands

@@ -34,7 +34,7 @@ class RedirectExternalLocation
             return false;
         }
 
-        $currentLocation = $request->getUri();
+        $currentLocation = $request->getSchemeAndHttpHost();
 
         // startsWith() is used to correctly handle locations with parameters
         return !Str::startsWith($location, $currentLocation);

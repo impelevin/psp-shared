@@ -16,9 +16,13 @@ trait ErrorHandling
         $response = parent::render($request, $e);
 
         if (!app()->environment(['local', 'testing']) && in_array($response->status(), [500, 503, 404, 403])) {
-            return Inertia::render('Error', ['status' => $response->status()])
-                ->toResponse($request)
-                ->setStatusCode($response->status());
+            if ($request->inertia() || !$request->ajax()) {
+                return inertia('Error', ['status' => $response->status()])
+                    ->toResponse($request)
+                    ->setStatusCode($response->status());
+            } else {
+                return response()->setStatusCode($response->status());
+            }
         }
 
         return $response;

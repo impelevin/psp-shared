@@ -4,6 +4,7 @@ namespace IMPelevin\PSPShared\LTree\Traits;
 
 use IMPelevin\PSPShared\LTree\Services\HierarchicalResourceCollection;
 use IMPelevin\PSPShared\LTree\Services\LTreeGroupService;
+use Umbrellio\LTree\Traits\LTreeModelTrait;
 
 trait LTreeResource
 {
